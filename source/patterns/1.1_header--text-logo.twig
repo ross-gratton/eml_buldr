@@ -1,0 +1,23 @@
+{% include "container.start.twig" with { outer_class: "bg--onyx", module: "Header - Title / Date Logo", thumb: "header--title-date-logo.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include "column.collection.start.twig" with { class: "mobile-stack mobile-center" } %}
+
+            {# Column 1 #}
+            {% include "column.start.twig" %} 
+                {% include 'content.start.twig' with { class: "copy t-20 white" } %}
+                    Email Title
+                {% include 'content.spacer.twig' with { class: "copy t-14 white" } %}
+                    January 1st 2018
+                {% include 'content.end.twig' %}
+            {% include "column.end.twig" with { gutter: 20 } %}
+
+            {# Column 2 #}
+            {% include "column.start.twig" with { attributes: "align='right'", class: "white" } %}
+
+                {% include "image.twig" with { src: "200x50.png" } %}
+
+            {% include "column.end.twig" %} 
+
+        {% include "column.collection.end.twig" %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: 15, right: 15 } %}
+{% include "container.end.twig" %}  

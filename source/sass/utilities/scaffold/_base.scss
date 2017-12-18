@@ -1,0 +1,36 @@
+body{
+	margin: 0px; padding: 0px;
+	background: $email-background;
+  	color: $base-font-color;
+	font-family: $base-font;
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: normal;
+}
+
+table.gmail-container {
+	width:100% !important;
+	min-width: 600px !important;
+	height:auto !important;
+	background: $email-background;
+}
+
+table{
+
+	border-collapse: collapse;
+
+	&.container{
+		width: 100%;
+
+		td{
+			&.container-body{
+				width: $container-width;
+			}
+		}
+	}
+}
+
+
+.main{ background: $white; }
+td.numeric{ text-align: right; }
+.center{ text-align: center; }

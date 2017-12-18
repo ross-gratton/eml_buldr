@@ -1,0 +1,26 @@
+{
+    "project": "rathbones-kit",
+    "dev_image_path": "../source/images/",
+    "prod_image_path": "images/",
+    "spacer": "spacer",
+    "horizontal_spacing": 15,
+    "vertical_spacing": 15,
+
+    "env":{
+        "sources": {
+            "sass": "../source/sass/",
+            "templates": "../source/templates/",
+            "patterns": "../source/patterns/",
+            "utilities": "../source/utilities/",
+            "fragments": "../source/fragments/"
+        },
+        "processing": {
+            "css": "tmp/css/",
+            "html": "tmp/html/"
+        },
+        "build": {
+            "dev": "../build/",
+            "package": "../package/"
+        }
+    }
+}

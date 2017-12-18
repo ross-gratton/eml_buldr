@@ -1,0 +1,23 @@
+{
+  "name": "emails-v2",
+  "version": "2.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ross Gratton",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-inline-css": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-purgecss": "^0.15.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-twig": "^1.1.1"
+  }
+}

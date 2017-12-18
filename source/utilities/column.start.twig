@@ -1,0 +1,8 @@
+{% set default_class = 'column ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<td
+	{% if width is defined %}width="{{ width }}"{% endif %}
+	{% include 'properties.inner.twig' %}
+>

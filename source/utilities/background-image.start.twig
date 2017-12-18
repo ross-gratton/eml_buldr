@@ -1,0 +1,9 @@
+{% if height == auto %}
+{% else %}
+<!--[if gte mso 9]>
+<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:{{ width }}px;height:{{ height }}px; background-repeat: {{ repeat }}">
+<v:fill type="tile" src="{{ image }}" color="#ffffff" />
+<v:textbox inset="0,0,0,0">
+<![endif]-->
+{% endif %}
+<div {% if div_class is defined %}class="{{ div_class }}"{% endif %}>

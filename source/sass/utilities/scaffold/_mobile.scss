@@ -1,0 +1,24 @@
+table{
+	&.container{
+		td{
+			&.container-body{
+				//width: 90% !important;
+				width: 100% !important;
+			}
+		}
+		tr{
+			&.container-spacer-top, &.container-spacer-bottom{ display: none; }
+		}
+	}
+
+	&.full-container{
+		td{
+			&.container-body{
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+.hide-on-mobile{ display: none; }
+.center-on-mobile{ text-align: center; }

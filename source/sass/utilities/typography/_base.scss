@@ -1,0 +1,36 @@
+a{
+    color: $link-color;
+    &.plain{ text-decoration: none; }
+}
+
+$pb: 12px;
+.t-8{ font-size: $pb - 2; line-height: $pb - 2; }
+.t-12{ font-size: $pb; line-height: $pb+8; }
+.t-14{ font-size: $pb+2; line-height: $pb+10; }
+.t-16{ font-size: $pb+4; line-height: $pb+12; }
+.t-18{ font-size: $pb+6; line-height: $pb+14; }
+.t-20{ font-size: $pb+8; line-height: $pb+16; }
+.t-22{ font-size: $pb+10; line-height: $pb+18; }
+.t-24{ font-size: $pb+12; line-height: $pb+20; }
+.t-26{ font-size: $pb+14; line-height: $pb+22; }
+.t-28{ font-size: $pb+16; line-height: $pb+24; }
+.t-30{ font-size: $pb+18; line-height: $pb+26; }
+.t-32{ font-size: $pb+20; line-height: $pb+28; }
+.t-34{ font-size: $pb+22; line-height: $pb+30; }
+.t-36{ font-size: $pb+24; line-height: $pb+32; }
+.t-38{ font-size: $pb+26; line-height: $pb+34; }
+.t-40{ font-size: $pb+28; line-height: $pb+36; }
+
+.lh-1{ line-height: 1; }
+.lh-1_1{ line-height: 1.1; }
+.lh-1_2{ line-height: 1.2; }
+.lh-1_3{ line-height: 1.3; }
+.lh-1_4{ line-height: 1.4; }
+.lh-1_5{ line-height: 1.5; }
+.lh-1_6{ line-height: 1.6; }
+
+.copy{ font-family: $body-copy-font; }
+.serif{ font-family: $serif-font; }
+.bold{ font-weight: bold; }
+.italic{ font-style: italic; }
+.justify{ text-align: justify; }

@@ -1,0 +1,15 @@
+// Switch config to project config
+@import "config";
+@import "mixins";
+
+/* Mobile */
+@media only screen and (max-width: $mobile-break-point){
+	
+	@import "utilities/typography/mobile";
+	@import "utilities/scaffold/mobile";
+	@import "utilities/columns/mobile";
+	@import "utilities/images/mobile";
+	@import "utilities/buttons/mobile";
+	@import "utilities/spacer/mobile";
+	@import "utilities/gmail-container/mobile";
+}

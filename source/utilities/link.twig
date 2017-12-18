@@ -1,0 +1,12 @@
+{% set default_class = 'copy ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<a 
+	href="{{ href }}"
+	target="_blank"
+	{% include 'properties.inner.twig' %}
+>{{ text }}</a>
+
+
+

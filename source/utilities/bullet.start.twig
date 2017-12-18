@@ -1,0 +1,9 @@
+{% set default_bullet_class = 'bullet ' %}
+{% if bullet_class is defined %}{% set bullet_class = default_bullet_class ~ bullet_class %}{% endif %}
+{% if bullet_class is not defined %}{% set bullet_class = default_bullet_class %}{% endif %}
+
+<tr>
+	{% if left is defined %}{% include 'spacer.td.twig' with { width: left } only %}{% endif %}
+	<td valign="top" align="center" width="10" {% include 'properties.inner.twig' with { class: bullet_class, attributes: bullet_attributes } only %}>&bull;</td>
+	{% if gutter is defined %}{% include 'spacer.td.twig' with { width: gutter } only %}{% endif %}
+	<td {% include 'properties.inner.twig' %}>

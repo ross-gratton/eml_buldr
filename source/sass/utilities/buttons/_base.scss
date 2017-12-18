@@ -1,0 +1,24 @@
+table.button-table{
+
+    background-color: $storm-dust;
+    border-radius: 0px;
+
+    &.full{
+	    width: 100%;
+		td.button-link-cell{ text-align: center; }
+	}
+
+    a.button-link{
+        font-size: 14px;
+        font-family: $button-font;
+        color: $white;
+        text-decoration: none;
+    }
+
+    &.social{
+	    &.facebook{ background-color: $mariner; }
+	    &.twitter{ background-color: $deep-sky-blue; }
+	    &.google{ background-color: $cinnabar; }
+	    a{ color: #ffffff; }
+    }
+}

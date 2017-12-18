@@ -1,0 +1,27 @@
+{% include "container.start.twig" with { outer_class: "bg--onyx", module: "Header - Logo Menu", thumb: "header--logo-menu.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include "column.collection.start.twig" with { class: "mobile-stack mobile-center" } %}
+
+            {# Column 1 #}
+            {% include "column.start.twig" %}
+                {% include "image.twig" with { src: "200x50.png" } %}
+            {% include "column.end.twig" with { gutter: 20 } %}
+
+            {# Column 2 #}
+            {% include "column.start.twig" with { attributes: "align='right'", class: "white" } %}
+
+                {% include "link.twig" with { href: "http://www.google.com", text: "Home", class: "white plain" } %}
+                {% include "spacer.twig" with { width: 10, class: "inline" } %}
+                |
+                {% include "spacer.twig" with { width: 10, class: "inline" } %}
+                {% include "link.twig" with { href: "http://www.google.com", text: "Blog", class: "white plain" } %}
+                {% include "spacer.twig" with { width: 10, class: "inline" } %}
+                |
+                {% include "spacer.twig" with { width: 10, class: "inline" } %}
+                {% include "link.twig" with { href: "http://www.google.com", text: "Contact", class: "white plain" } %}
+
+            {% include "column.end.twig" %}
+
+        {% include "column.collection.end.twig" %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %}

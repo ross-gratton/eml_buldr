@@ -1,0 +1,5 @@
+{% include "container.start.twig" with { outer_class: "bg--onyx", module: "Header - Logo", thumb: "header--logo.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing, class: "center-on-mobile" } %}
+        {% include "image.twig" with { src: "200x50.png" } %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %}

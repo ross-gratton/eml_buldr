@@ -1,0 +1,14 @@
+img.full{ width: 100% !important; }
+.contains-image.mobile-full img{ width: 100% !important; height: auto !important;} 
+table{
+	td{
+		&.center-image{
+			text-align: center;
+		}
+	}
+}
+
+// VW Image sizes
+@for $i from 0 through 100 {
+	.mvw-#{$i}{ width: #{$i}vw; }
+}

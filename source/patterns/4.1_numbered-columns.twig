@@ -1,0 +1,20 @@
+{% set column_gutter = 20 %}
+{% set column_width = ((630 - column_gutter) - (horizontal_spacing * 2)) / 2 %}
+
+{% include "container.start.twig" with { outer_class: "bg--white", module: "Round Up", thumb: "round-up.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include 'column.collection.start.twig' with { class: "stack-on-mobile" } %}
+
+            {# Column 1 #}
+            {% include "column.start.twig" with { width: column_width, attributes: "valign='top'" } %}
+                {% include "../../fragments/number-text.twig" %}
+            {% include "column.end.twig" with { gutter: column_gutter } %}
+
+            {# Column 2 #}
+            {% include "column.start.twig" with { width: column_width, attributes: "valign='top'" } %}
+                {% include "../../fragments/number-text.twig" %}
+            {% include "column.end.twig" %}
+
+        {% include 'column.collection.end.twig' %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %} 

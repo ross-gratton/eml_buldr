@@ -1,0 +1,10 @@
+{% set default_class = 'column-container ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<table
+	width="100%" 
+	{% include 'table-reset.twig' %}
+	{% include 'properties.inner.twig' %}
+>
+	<tr>

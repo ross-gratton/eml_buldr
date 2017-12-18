@@ -1,0 +1,11 @@
+{% set default_class = 'spacer ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<td
+	{% if colspan is defined %}colspan="{{ colspan }}"{% endif %}
+	{% if width is defined %}width="{{ width }}"{% endif %}
+	{% include 'properties.inner.twig' %}
+>
+{% include 'spacer.twig' with { width: width, height: height, class: spacer_class, attributes: spacer_attributes } only %}
+</td>

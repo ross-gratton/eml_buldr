@@ -1,0 +1,5 @@
+</td>
+{% if gutter is defined %}
+	{% set responsive_class = "column-gutter gutter-" ~ gutter %}		
+	{% include 'spacer.td.twig' with { width: gutter, class: responsive_class } only %}
+{% endif %}

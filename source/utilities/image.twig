@@ -1,0 +1,6 @@
+<img
+    {% if ext_src is defined %}src="{{ ext_src }}"{% endif %}
+    {% if src is defined %}src="{{ imagepath }}{{ src }}"{% endif %}
+    {% if width is defined %}width="{{ width }}"{% endif %}
+    {% include 'properties.inner.twig' %}
+/>

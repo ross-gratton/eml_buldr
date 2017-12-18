@@ -1,0 +1,32 @@
+{% set colspan = 1 %}
+{% if left is defined %}{% set colspan = colspan+1 %}{% endif %}
+{% if right is defined %}{% set colspan = colspan+1 %}{% endif %}
+
+{% set default_outer_class = 'button-table ' %}
+{% if outer_class is defined %}{% set outer_class = default_outer_class ~ outer_class %}{% endif %}
+{% if outer_class is not defined %}{% set outer_class = default_outer_class %}{% endif %}
+
+{% set default_class = 'button-link-cell ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+{% set default_link_class = 'button-link ' %}
+{% if link_class is defined %}{% set link_class = default_link_class ~ link_class %}{% endif %}
+{% if link_class is not defined %}{% set link_class = default_link_class %}{% endif %}
+
+<table
+	{% include 'table-reset.twig' %}
+	{% include 'properties.outer.twig' %}
+>
+	{% if top is defined %}{% include 'spacer.tr.twig' with { height: top, colspan: colspan } only %}{% endif %}
+	<tr>
+		{% if left is defined %}{% include 'spacer.td.twig' with { width: left } only %}{% endif %}
+    	<td {% include 'properties.inner.twig' %}>
+
+			{% include 'link.twig' with { class: link_class, href: href, attributes: link_attributes, text: text } only %}
+
+    	</td>
+    	{% if right is defined %}{% include 'spacer.td.twig' with { width: right } only %}{% endif %}
+	</tr>
+	{% if bottom is defined %}{% include 'spacer.tr.twig' with { height: bottom, colspan: colspan } only %}{% endif %}
+</table>

@@ -1,0 +1,20 @@
+{% set default_outer_class = 'container ' %}
+{% if outer_class is defined %}{% set outer_class = default_outer_class ~ outer_class %}{% endif %}
+{% if outer_class is not defined %}{% set outer_class = default_outer_class %}{% endif %}
+
+{% set default_class = 'container-body ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<table
+	width="100%"
+	{% include 'table-reset.twig' %}
+	{% include 'properties.outer.twig' %}
+	{% if module is defined %}data-module="{{ module }}"{% endif %}
+	{% if thumb is defined %}data-thumb="modules/{{ thumb }}"{% endif %}
+>
+	{% if top is defined %}{% include 'spacer.tr.twig' with { height: top, colspan: 3 } only %}{% endif %}
+	<tr>
+		<td class="spacer">&nbsp;</td>
+		<td {% include 'properties.inner.twig' %} >
+		<!-- Opening of .body-container td -->

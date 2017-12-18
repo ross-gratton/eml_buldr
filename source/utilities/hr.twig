@@ -1,0 +1,7 @@
+<table width="100%" {% include 'table-reset.twig' %} >
+	{% include 'spacer.tr.twig' with { height: top } only %}
+	<tr>
+		{% include 'spacer.td.twig' with { height: 1, width: 1, class: "horizontal-rule" } only %}
+	</tr>
+	{% include 'spacer.tr.twig' with { height: bottom } only %}
+</table>

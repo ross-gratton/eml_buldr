@@ -1,0 +1,10 @@
+{% set default_class = 'spacer-img ' %}
+{% if class is defined %}{% set class = default_class ~ class %}{% endif %}
+{% if class is not defined %}{% set class = default_class %}{% endif %}
+
+<img
+	src="[[image-path]][[spacer-type]].png"
+	{% if width is defined %}width="{{ width }}"{% else %}width="1"{% endif %}
+	{% if height is defined %}height="{{ height }}"{% else %}height="1"{% endif %}
+	{% include 'properties.inner.twig' %}
+/>

@@ -1,0 +1,4 @@
+app/.sass-cache
+app/node_modules
+app/tmp
+.DS_Store

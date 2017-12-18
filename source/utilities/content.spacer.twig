@@ -1,0 +1,11 @@
+{% set colspan = 1 %}
+{% if left is defined %}{% set colspan = colspan+1 %}{% endif %}
+{% if right is defined %}{% set colspan = colspan+1 %}{% endif %}
+
+	</td>
+	{% if right is defined %}{% include 'spacer.td.twig', with { width: right } only %}{% endif %}
+</tr>
+{% if height is defined %}{% include 'spacer.tr.twig' with { height: height, colspan: colspan, spacer_class: spacer_class, spacer_attributes: spacer_attributes } only %}{% endif %}
+<tr>
+	{% if left is defined %}{% include 'spacer.td.twig', with { width: left } only %}{% endif %}
+	<td {% include 'properties.inner.twig' %}>

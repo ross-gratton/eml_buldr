@@ -1,0 +1,7 @@
+{% include "container.start.twig" with { module: "Hero", thumb: "hero.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing, class: "contains-image" } %}
+
+        {% include "image.twig" with { src: "600x200.png", class: "full" } %}
+
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %} 

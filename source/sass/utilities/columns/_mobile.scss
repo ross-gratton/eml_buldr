@@ -1,0 +1,27 @@
+.column-container{
+	width: 100% !important;
+
+    &.mobile-stack, &.stack-on-mobile{
+		.column { display: block !important; width: 100% !important; }
+			
+        .column-gutter{
+        	display: block !important;
+        	width: 100% !important;
+
+        	img{ width: 1px !important; }
+
+        	@for $i from 0 through 100{
+        		&.gutter-#{$i}{
+        			height:#{$i}px !important;
+        			img{ height:#{$i}px !important; }
+        		}
+        	}
+        }
+    }
+
+    &.mobile-center, &.center-on-mobile{
+        .column{ text-align: center !important; }
+	}
+	
+	.column.numeric{ text-align: right !important; }
+}
