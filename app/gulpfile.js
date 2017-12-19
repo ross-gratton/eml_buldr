@@ -67,13 +67,13 @@ gulp.task('purgecss', ['pre-build'], function(){
 			.pipe(twig({
 				base: "../source/utilities/",
 				data: {
-					imagepath: config.dev_image_path,
+					imagepath: config.image_path,
 					spacertype: config.spacer,
 					csspath: "../app/tmp/css/",
 					patterns: patterns
 				}
 			}))
-			.pipe(replace("[[image-path]]", config.dev_image_path))
+			.pipe(replace("[[image-path]]", config.image_path))
 			.pipe(replace("[[spacer-type]]", config.spacer))
 			.pipe(gulp.dest(config.env.processing.html))
 			.pipe(livereload());
@@ -85,7 +85,7 @@ gulp.task('purgecss', ['pre-build'], function(){
 			.pipe(twig({
 				base: "../source/utilities/",
 				data: {
-					imagepath: config.dev_image_path,
+					imagepath: config.image_path,
 					spacertype: config.spacer,
 					csspath: "../app/tmp/css/",
 					patterns: patterns,
@@ -93,7 +93,7 @@ gulp.task('purgecss', ['pre-build'], function(){
 					vertical_spacing: config.vertical_spacing
 				}
 			}))
-			.pipe(replace("[[image-path]]", config.dev_image_path))
+			.pipe(replace("[[image-path]]", config.image_path))
 			.pipe(replace("[[spacer-type]]", config.spacer))
 			.pipe(htmlmin({
 				collapseWhitespace: true,
