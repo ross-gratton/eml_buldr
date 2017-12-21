@@ -9,3 +9,8 @@
         @content;
     }
 }
+
+@function get-vw($target_value) {
+    $vw-ratio: 100/$vw_base;
+    @return ($target_value*$vw-ratio) * 1vw;
+}

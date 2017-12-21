@@ -1,24 +1,17 @@
 table{
 	&.container{
-		td{
-			&.container-body{
-				//width: 90% !important;
-				width: 100% !important;
-			}
-		}
+		td.container-body{ width: 100% !important; }
 		tr{
 			&.container-spacer-top, &.container-spacer-bottom{ display: none; }
 		}
 	}
-
-	&.full-container{
-		td{
-			&.container-body{
-				width: 100% !important;
-			}
-		}
-	}
 }
 
-.hide-on-mobile{ display: none; }
-.center-on-mobile{ text-align: center; }
+// Generic mobile only helpers
+.hide-on-mobile{ display: none !important; }
+.center-on-mobile{ text-align: center !important; }
+
+// VW Measures helper classes for mobile only
+@for $i from 0 through 100 {
+	.mvw-#{$i}{ width: #{$i}vw; }
+}

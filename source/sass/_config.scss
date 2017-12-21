@@ -1,17 +1,14 @@
 @import "colours";
 
 // Scaffold
-$container-width: 630px;
+$container-width: 640px; 
 $mobile-break-point: 600px;
 
 // Copy
-$base-font: "Arial";
+$sans-serif-font: "Arial";
 $serif-font: "Georgia";
 $base-font-color: #7d7f81;
-$body-title-font: $base-font;
-$body-copy-font: $base-font;
-$footer-font: $base-font;
-$button-font: $base-font;
+$body-copy-font: $sans-serif-font;
 
 // Scaffold
 $email-background: #ffffff;
@@ -20,4 +17,8 @@ $email-background: #ffffff;
 $link-color: blue;
 
 // Rules
-$horizontal-rule: #DBDBDB;
+$horizontal-rule: #DBDBDB; 
+
+// VW Conversion
+// This value is the mobile breakpoint minus the 'px' as this serves as the context for vw units.
+$vw_base: 600; 

@@ -1,4 +1,5 @@
-$bvw: 3.8vw;
+// Makes type relative to screen size, not sure if we should use this
+
 //$bvw: 2vw;
 /*
 .t-12{ font-size: $bvw !important; line-height: $bvw+2.2 !important; }
@@ -18,4 +19,4 @@ $bvw: 3.8vw;
 .t-40{ font-size: $bvw+7.6 !important; line-height: $bvw+10.5 !important; }
 */
 
-.bold-on-mobile { font-weight: bold; }
+.bold-on-mobile { font-weight: bold !important; }

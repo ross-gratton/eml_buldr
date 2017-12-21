@@ -2,10 +2,7 @@ body{
 	margin: 0px; padding: 0px;
 	background: $email-background;
   	color: $base-font-color;
-	font-family: $base-font;
-	font-size: 14px;
-	line-height: 1.6;
-	font-weight: normal;
+	font-family: $sans-serif-font;
 }
 
 table.gmail-container {
@@ -21,16 +18,9 @@ table{
 
 	&.container{
 		width: 100%;
-
-		td{
-			&.container-body{
-				width: $container-width;
-			}
-		}
+		td.container-body{ width: $container-width; }
 	}
 }
 
-
-.main{ background: $white; }
 td.numeric{ text-align: right; }
 .center{ text-align: center; }

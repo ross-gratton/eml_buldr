@@ -7,8 +7,3 @@ table{
 		}
 	}
 }
-
-// VW Image sizes
-@for $i from 0 through 100 {
-	.mvw-#{$i}{ width: #{$i}vw; }
-}

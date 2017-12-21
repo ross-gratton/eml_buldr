@@ -42,7 +42,7 @@
 //////////////////////////////////////////////////////////////////////////////*/
 gulp.task('sass', ['get-patterns'], function(){
 	return sass(config.env.sources.sass + '*', { style:"nested", sourcemap:false })
-		.pipe(cleanCSS())
+		//.pipe(cleanCSS())
         .pipe(gulp.dest(config.env.processing.css));
 });
 gulp.task('purgecss', ['pre-build'], function(){

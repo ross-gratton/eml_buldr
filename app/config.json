@@ -1,9 +1,9 @@
 {
     "project": "rathbones-kit",
     "image_path": "images/",
-    "spacer": "spacer",
-    "horizontal_spacing": 15,
-    "vertical_spacing": 15,
+    "spacer": "spacer-visible",
+    "horizontal_spacing": 20,
+    "vertical_spacing": 20,
 
     "env":{
         "sources": {
