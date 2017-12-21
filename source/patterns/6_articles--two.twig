@@ -7,12 +7,12 @@
 
             {# Column 1 #}
             {% include "column.start.twig" with { width: column_width, attributes: "valign='top'" } %}
-                {% include "../../fragments/article.twig" %}
+                {% include "../../fragments/article.twig" with { image_width: column_width } %}
             {% include "column.end.twig" with { gutter: articles_gutter } %}
 
             {# Column 2 #}
             {% include "column.start.twig" with { width: column_width, attributes: "valign='top'" } %}
-                {% include "../../fragments/article.twig" %}
+                {% include "../../fragments/article.twig" with { image_width: column_width } %}
             {% include "column.end.twig" %}
 
         {% include "column.collection.end.twig" %}

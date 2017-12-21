@@ -4,7 +4,7 @@
 
             {# Column 1 #}
             {% include "column.start.twig" with { class: "contains-image", width: 200, attributes: "valign='top'" } %}
-                {% include 'image.twig' with { src: "200x200.png", class: "full" } %}
+                {% include 'image.twig' with { src: "400x400.png", class: "full", width: 200 } %}
             {% include "column.end.twig" with { gutter: 20 } %}
 
             {# Column 2 #}

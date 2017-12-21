@@ -19,6 +19,6 @@ table{
 .contains-image--inline { display: inline; }
 
 img { border: none; }
-img.full{ width: 100%; }
+img.full{ max-width: 100%; }
 
 img.block { display: block; }

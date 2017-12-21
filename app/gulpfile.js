@@ -36,7 +36,6 @@
 		});
 	});
 
-
 /*//////////////////////////////////////////////////////////////////////////////
 || Styles
 //////////////////////////////////////////////////////////////////////////////*/
@@ -59,59 +58,54 @@ gulp.task('purgecss', ['pre-build'], function(){
 		.pipe(gulp.dest(config.env.processing.css));
 });
 
-
 /*//////////////////////////////////////////////////////////////////////////////
 || Build
 //////////////////////////////////////////////////////////////////////////////*/
+gulp.task('pre-build', ['sass'], function(){
 
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    || Standard
-	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    gulp.task('pre-build', ['sass'], function(){
+	return gulp.src(config.env.sources.utilities + 'index__pre-build.twig')
+		.pipe(twig({
+			base: "../source/utilities/",
+			data: {
+				imagepath: config.image_path,
+				spacertype: config.spacer,
+				csspath: "../app/tmp/css/",
+				patterns: patterns
+			}
+		}))
+		.pipe(replace("[[image-path]]", config.image_path))
+		.pipe(replace("[[spacer-type]]", config.spacer))
+		.pipe(gulp.dest(config.env.processing.html))
+		.pipe(livereload());
 
-		return gulp.src(config.env.sources.utilities + 'index__pre-build.twig')
-			.pipe(twig({
-				base: "../source/utilities/",
-				data: {
-					imagepath: config.image_path,
-					spacertype: config.spacer,
-					csspath: "../app/tmp/css/",
-					patterns: patterns
-				}
-			}))
-			.pipe(replace("[[image-path]]", config.image_path))
-			.pipe(replace("[[spacer-type]]", config.spacer))
-			.pipe(gulp.dest(config.env.processing.html))
-			.pipe(livereload());
+});
+gulp.task('build', ['purgecss'], function(){
 
-    });
-	gulp.task('build', ['purgecss'], function(){
-
-		return gulp.src(config.env.sources.utilities + 'index.twig')
-			.pipe(twig({
-				base: "../source/utilities/",
-				data: {
-					imagepath: config.image_path,
-					spacertype: config.spacer,
-					csspath: "../app/tmp/css/",
-					patterns: patterns,
-					horizontal_spacing: config.horizontal_spacing,
-					vertical_spacing: config.vertical_spacing
-				}
-			}))
-			.pipe(replace("[[image-path]]", config.image_path))
-			.pipe(replace("[[spacer-type]]", config.spacer))
-			.pipe(htmlmin({
-				collapseWhitespace: true,
-				removeComments: true
-			}))
-			.pipe(gulp.dest(config.env.build.dev))
-			.pipe(inlineCss({
-				removeStyleTags: false
-			}))
-			.pipe(gulp.dest(config.env.build.dev))
-			.pipe(livereload());
-	});
+	return gulp.src(config.env.sources.utilities + 'index.twig')
+		.pipe(twig({
+			base: "../source/utilities/",
+			data: {
+				imagepath: config.image_path,
+				spacertype: config.spacer,
+				csspath: "../app/tmp/css/",
+				patterns: patterns,
+				horizontal_spacing: config.horizontal_spacing,
+				vertical_spacing: config.vertical_spacing
+			}
+		}))
+		.pipe(replace("[[image-path]]", config.image_path))
+		.pipe(replace("[[spacer-type]]", config.spacer))
+		.pipe(htmlmin({
+			collapseWhitespace: true,
+			removeComments: true
+		}))
+		.pipe(gulp.dest(config.env.build.dev))
+		.pipe(inlineCss({
+			removeStyleTags: false
+		}))
+		.pipe(gulp.dest(config.env.build.dev))
+		.pipe(livereload());
+});
 
 /*//////////////////////////////////////////////////////////////////////////////
 || Package
@@ -132,7 +126,6 @@ gulp.task('package', function(){
 		.pipe(gulp.dest(config.env.build.package + 'email'));
 
 });
-
 
 /*//////////////////////////////////////////////////////////////////////////////
 || Watches
