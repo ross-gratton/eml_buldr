@@ -42,13 +42,19 @@
 //////////////////////////////////////////////////////////////////////////////*/
 gulp.task('sass', ['get-patterns'], function(){
 	return sass(config.env.sources.sass + '*', { style:"nested", sourcemap:false })
-		//.pipe(cleanCSS())
         .pipe(gulp.dest(config.env.processing.css));
 });
 gulp.task('purgecss', ['pre-build'], function(){
 	return gulp.src(config.env.processing.css + 'mobile.css')
 		.pipe(purgecss({
 			content: [config.env.processing.html + "index__pre-build.html"]
+		}))
+		.pipe(cleanCSS({
+			level:{
+				1:{
+					roundingPrecision: 'all=2'
+				}
+			}
 		}))
 		.pipe(gulp.dest(config.env.processing.css));
 });
