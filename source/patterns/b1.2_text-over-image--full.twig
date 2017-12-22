@@ -1,0 +1,18 @@
+{% include "container.start.twig" with { 
+    outer_class: "bg--norway", module: "Image over image", thumb: "image-over-image.png", full: true,
+    attributes: "style='background-image: url(images/abstract-hills--banner.jpg); background-position: bottom center;'"
+} %}
+    {% include 'background-image.start.twig' with { image: "images/abstract-hills-banner.jpg", repeat: "no-repeat", width: 1200, height: 400 } %}
+        {% include 'container.start.twig' %}
+
+            {% include 'content.start.twig' with { class: "center copy white t-50 bold", top: 50, left: horizontal_spacing, right: horizontal_spacing } %}
+                Hero Messaging
+            {% include 'content.spacer.twig' with { class: "copy white t-20 center", height: 30, left: horizontal_spacing, right: horizontal_spacing } %}
+
+                Dolor anim eiusmod deserunt minim enim sint duis elit proident proident. Elit incididunt esse excepteur incididunt est reprehenderit mollit velit ad aliquip sunt consectetur. Reprehenderit amet Lorem consequat ad anim sunt elit ad. Nulla exercitation duis nisi irure commodo nostrud velit exercitation anim. Duis fugiat aliquip labore ullamco amet exercitation est adipisicing occaecat irure sunt veniam veniam reprehenderit.
+
+            {% include 'content.end.twig' with { bottom: 50, left: horizontal_spacing, right: horizontal_spacing } %}
+
+        {% include 'container.end.twig' %} 
+    {% include 'background-image.end.twig' %} 
+{% include "container.end.twig" with { full: true } %}

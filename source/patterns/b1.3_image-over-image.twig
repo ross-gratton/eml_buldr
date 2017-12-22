@@ -1,0 +1,14 @@
+{% include "container.start.twig" with { 
+    outer_class: "bg--chathams-blue", module: "Image over image", thumb: "image-over-image.png",
+    attributes: "style='background-image: url(images/abstract-hills--banner.jpg); background-position: center;'"
+} %}
+    {% include 'background-image.start.twig' with { image: "images/abstract-hills-banner.jpg", repeat: "no-repeat", width: 640, height: 400 } %}
+        {% include 'container.start.twig' %}
+
+            {% include 'content.start.twig' with { class: "center contains-image", top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+                {% include 'image.twig' with { src: "300x300.png" } %}
+            {% include 'content.end.twig' with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+
+        {% include 'container.end.twig' %} 
+    {% include 'background-image.end.twig' %} 
+{% include "container.end.twig" %}

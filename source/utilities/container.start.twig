@@ -13,8 +13,7 @@
 	{% if module is defined %}data-module="{{ module }}"{% endif %}
 	{% if thumb is defined %}data-thumb="modules/{{ thumb }}"{% endif %}
 >
-	{% if top is defined %}{% include 'spacer.tr.twig' with { height: top, colspan: 3 } only %}{% endif %}
 	<tr>
-		<td class="spacer">&nbsp;</td>
+		{% if full is not defined %}<td class="spacer">&nbsp;</td>{% endif %}
 		<td {% include 'properties.inner.twig' %} >
 		<!-- Opening of .body-container td -->

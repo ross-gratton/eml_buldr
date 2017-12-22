@@ -1,5 +1,4 @@
 		</td>
-		<td class="spacer">&nbsp;</td>
+		{% if full is not defined %}<td class="spacer">&nbsp;</td>{% endif %}
 	</tr>
-	{% if bottom is defined %}{% include 'spacer.tr.twig' with { height: bottom, colspan: 3 } only %}{% endif %}
 </table>

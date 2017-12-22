@@ -1,8 +1,8 @@
 {% set column_gutter = 20 %}
 {% set column_width = ((630 - column_gutter) - (horizontal_spacing * 2)) / 2 %}
 
-{% include "container.start.twig" with { outer_class: "bg--white", module: "Round Up", thumb: "round-up.png" } %}
-    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.start.twig" with { outer_class: "bg--white", class: "bg--white", module: "Round Up - Additional", thumb: "round-up--additional.png" } %}
+    {% include "content.start.twig" with { top: 20, left: horizontal_spacing, right: horizontal_spacing } %}
         {% include 'column.collection.start.twig' with { class: "stack-on-mobile" } %}
 
             {# Column 1 #}
@@ -16,5 +16,5 @@
             {% include "column.end.twig" %}
 
         {% include 'column.collection.end.twig' %}
-    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+    {% include "content.end.twig" with { left: horizontal_spacing, right: horizontal_spacing } %}
 {% include "container.end.twig" %} 
