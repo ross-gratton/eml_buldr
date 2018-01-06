@@ -32,7 +32,12 @@
 	var patterns = [];
 	gulp.task('get-patterns', function(){
 		return fs.readdir('../source/patterns', function(err, files){
-			patterns = files;
+			
+			patterns = files.filter(function(file){
+				return file.includes(".twig");
+			});
+
+			console.log("patterns", patterns);
 		});
 	});
 
@@ -40,10 +45,16 @@
 || Styles
 //////////////////////////////////////////////////////////////////////////////*/
 gulp.task('sass', ['get-patterns'], function(){
+
+	if (patterns.length == 0){ return false; }
+
 	return sass(config.env.sources.sass + '*', { style:"nested", sourcemap:false })
         .pipe(gulp.dest(config.env.processing.css));
 });
 gulp.task('purgecss', ['pre-build'], function(){
+
+	if (patterns.length == 0){ return false; }
+
 	return gulp.src(config.env.processing.css + 'mobile.css')
 		.pipe(purgecss({
 			content: [config.env.processing.html + "index__pre-build.html"]
@@ -63,6 +74,8 @@ gulp.task('purgecss', ['pre-build'], function(){
 //////////////////////////////////////////////////////////////////////////////*/
 gulp.task('pre-build', ['sass'], function(){
 
+	if (patterns.length == 0){ return false; }
+
 	return gulp.src(config.env.sources.utilities + 'index__pre-build.twig')
 		.pipe(twig({
 			base: "../source/utilities/",
@@ -80,6 +93,8 @@ gulp.task('pre-build', ['sass'], function(){
 
 });
 gulp.task('build', ['purgecss'], function(){
+
+	if (patterns.length == 0){ return false; }
 
 	return gulp.src(config.env.sources.utilities + 'index.twig')
 		.pipe(twig({
