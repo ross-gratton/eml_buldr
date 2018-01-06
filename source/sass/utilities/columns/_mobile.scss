@@ -4,18 +4,23 @@
     &.mobile-stack, &.stack-on-mobile{
 		.column { display: block !important; width: 100% !important; }
 			
+		.cancel-stack-on-mobile{
+			// If you cancel stack on mobile, widths have to be reset using mvw
+			.column{
+				display: table-cell !important; width: inherit !important;
+
+				// VW Measures helper classes for mobile only
+				@for $i from 0 through 100 {
+					.mvw-#{$i}{ width: #{$i}vw !important; }
+				}
+			}
+		}
+
         .column-gutter{
         	display: block !important;
         	width: 100% !important;
 
         	img{ width: 1px !important; }
-
-        	// @for $i from 0 through 100{
-        	// 	&.gutter-#{$i}{
-        	// 		height:#{$i}px !important;
-        	// 		img{ height:#{$i}px !important; }
-        	// 	}
-			// }
 			
 			// Changed to make gutter follow the same VW method as spacers
 			@for $i from 1 through 30{

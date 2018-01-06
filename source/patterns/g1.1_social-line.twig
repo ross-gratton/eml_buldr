@@ -1,0 +1,21 @@
+{% include "container.start.twig" with { outer_class: "bg--casper", module: "Social Line", thumb: "social-line.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include "column.collection.start.twig" with { class: "mobile-stack mobile-center" } %}
+
+            {# Column 1 #}
+            {% include "column.start.twig" with { valign: "middle" } %}
+                {% include "link.twig" with { href: "http://www.google.com", class: "white t-16 plain", text: "Visit our website" } %}
+            {% include "column.end.twig" with { gutter: 10 } %}
+
+            {# Column 2 #}
+            {% include "column.start.twig" with { attributes: "align='right'", class: "contains-image" } %}
+
+              <a href="https://twitter.com/Rathbones1742" class="contains-image">{% include "image.twig" with { src: "social--twitter--white.png" } %}</a>
+              <a href="https://www.facebook.com/Rathbonebrothersplc/" class="contains-image">{% include "image.twig" with { src: "social--facebook--white.png" } %}</a>
+              <a href="https://www.linkedin.com/company/rathbone-brothers-plc" class="contains-image">{% include "image.twig" with { src: "social--linkedin--white.png" } %}</a>
+
+            {% include "column.end.twig" %}
+
+        {% include "column.collection.end.twig" %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %}

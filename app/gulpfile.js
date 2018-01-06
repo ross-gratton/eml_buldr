@@ -43,14 +43,10 @@
 //////////////////////////////////////////////////////////////////////////////*/
 gulp.task('sass', ['get-patterns'], function(){
 
-	if (patterns.length == 0){ return false; }
-
 	return sass(config.env.sources.sass + '*', { style:"nested", sourcemap:false })
         .pipe(gulp.dest(config.env.processing.css));
 });
 gulp.task('purgecss', ['pre-build'], function(){
-
-	if (patterns.length == 0){ return false; }
 
 	return gulp.src(config.env.processing.css + 'mobile.css')
 		.pipe(purgecss({

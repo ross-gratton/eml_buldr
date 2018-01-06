@@ -13,5 +13,5 @@ table{
 
 // VW Measures helper classes for mobile only
 @for $i from 0 through 100 {
-	.mvw-#{$i}{ width: #{$i}vw; }
+	.mvw-#{$i}{ width: #{$i}vw !important; }
 }

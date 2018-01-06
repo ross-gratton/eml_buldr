@@ -12,6 +12,9 @@ $line_height_modifier: 8px;
         font-size: #{$i}px; 
         line-height: $i+$line_height_modifier;
     }
+    .lh-#{$i}{ 
+        line-height: $i+$line_height_modifier;
+    }
 }
 
 // Test these as I'm not sure they work as relative units across all browsers
