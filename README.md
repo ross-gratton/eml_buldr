@@ -51,9 +51,16 @@ There are a bunch of gulp tasks in here, most of them don't need to be run direc
 - build
 - package
 
-# Example Use
+# Usage
+As utilites are twig files, use as such:
+```HTML
+{% include "container.start.twig" with { outer_class: "bg--norway", outer_attributes: "valign='top'" } %}
+```
 
-Pattern to show an image next to article fields.
+## Example Pattern
+The tool is bundled with a bunch of patterns for you to use in order to understand how to work with the utilities.
+
+![Image Left of Article Fields](/source/thumbnails/image-left-of-article-fields.png)
 ```
 {% include "container.start.twig" with { outer_class: "bg--gallery", module: "Article - Image Left", thumb: "articles--image-left.png" } %}
     {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
@@ -75,18 +82,7 @@ Pattern to show an image next to article fields.
 ```
 
 
-# Utilities
-The following is a list of the available utilities and the properties you can pass through to them.
-
-## Usage
-As utilites are twig files, use as such:
-```HTML
-{% include "container.start.twig" with { outer_class: "bg--norway", outer_attributes: "valign='top'" } %}
-```
-
-The tool is bundles with a bunch of patterns for you to use in order to understand how to work with the utilities.
-
-## Key Points
+# Key Points
 `outer_class|_attributes` adds to a containing table
 `class|attributes` add to the td
 
@@ -96,6 +92,9 @@ e.g:
 	<tr>
 		<td [class] [attributes]>
 ```
+
+# Utilities
+The following is a list of the available utilities and the properties you can pass through to them.
 
 ### container.start.twig
 ```
