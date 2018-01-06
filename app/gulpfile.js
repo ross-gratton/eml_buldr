@@ -117,6 +117,7 @@ gulp.task('build', ['purgecss'], function(){
 gulp.task('package', function(){
 
 	gulp.src([config.env.build.dev + 'index.html'], { base: '../build/' })
+		.pipe(replace("spacer-visible", "spacer"))
 		.pipe(gulp.dest(config.env.build.package + 'email'));
 
 	gulp.src(['../source/thumbnails/*'], { base: '../source/' })

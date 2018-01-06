@@ -1,6 +1,6 @@
 {
     "image_path": "images/",
-    "spacer": "spacer",
+    "spacer": "spacer-visible",
     "horizontal_spacing": 20,
     "vertical_spacing": 20,
 
