@@ -27,6 +27,30 @@ Once you have those head into `/app` and run
 npm install
 ```
 
+# Structure
+You work in `/source`
+
+`/images` - pretty self explanitory
+
+`/sass` - same
+
+`/utilities` - the twig utilites that are used to build patterns
+
+`/fragments` - reusable patterns, just build them once and use them in your patterns
+
+`/patterns` - your 'modules' 'blocks' 'sections' whatever you want to call them, whatever is in this directory get compiled into your email
+
+`/thumbnails` - StampReady module thumbnail images, reference these in your patterns
+
+The generator takes everything from `/patterns` and renders it into `/build/index.html`
+
+# Gulp Tasks
+There are a bunch of gulp tasks in here, most of them don't need to be run directly. The only ones you'll need are.
+
+- watch
+- build
+- package
+
 # Example Use
 
 Pattern to show an image next to article fields.
