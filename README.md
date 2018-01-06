@@ -1,3 +1,6 @@
+# Introduction
+Ok this is a HTML email generator, it's been built because I saw too many issues with email generators that already exist. This generator aims to create bullet proof HTML emails. But if it doesn't, then all the insides are right there for you to tweak for you needs.
+
 container.start.twig
 	- outer_class
 	- outer_attributes
