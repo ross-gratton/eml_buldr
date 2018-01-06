@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="{{ csspath }}screen.css" type="text/css" />
 
     <style type="text/css">
-        body {font-family: Arial;margin: 0; padding: 0;}
+        body { font-family: Arial; margin: 0; padding: 0; }
         a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
     </style>
     <style type="text/css">{% include '../../app/tmp/css/mobile.css' %}</style>
 </head>
 <body>
     
-{# <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gmail-container" style="min-width:600px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="gmail-container">
     <tr>
-        <td valign="top"> #}
+        <td valign="top">
 
             {% for pattern in patterns %}
                 {% include "patterns/" ~ pattern %} 
             {% endfor %} 
 
-        {# </td>
+        </td>
     </tr>
-</table> #}
+</table>
 
 </body>
 </html>

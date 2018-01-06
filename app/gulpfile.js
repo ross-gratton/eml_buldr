@@ -32,12 +32,9 @@
 	var patterns = [];
 	gulp.task('get-patterns', function(){
 		return fs.readdir('../source/patterns', function(err, files){
-			
 			patterns = files.filter(function(file){
 				return file.includes(".twig");
 			});
-
-			console.log("patterns", patterns);
 		});
 	});
 
