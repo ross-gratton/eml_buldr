@@ -1,14 +1,15 @@
 {% include "container.start.twig" with { 
-    module: "Image over image - Full Bleed", thumb: "image-over-image--full-bleed.png", full: true,
-    attributes: "style='background-image: url(images/abstract-hills--banner.jpg); background-position: center;'"
+    outer_class: "bg--smalt-blue", module: "Image over image - Full Bleed", thumb: "image-over-image--full-bleed.png", full: true,
+    attributes: 'style="background-position: center;" background="images/abstract-hills--banner.jpg"'
 } %}
-    {% include 'background-image.start.twig' with { image: "images/abstract-hills-banner.jpg", repeat: "no-repeat", width: 1200, height: 400 } %}
-        {% include 'container.start.twig' %}
+    {% include 'container.start.twig' %}
 
-            {% include 'content.start.twig' with { class: "center contains-image", top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include 'content.start.twig' with { class: "center contains-image", top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+            {% include 'background-image.start.twig' with { image: "images/abstract-hills-banner.jpg", repeat: "no-repeat", width: 1200, height: 400 } %}
                 {% include 'image.twig' with { src: "300x300.png" } %}
-            {% include 'content.end.twig' with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+            {% include 'background-image.end.twig' %} 
+        {% include 'content.end.twig' with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
 
-        {% include 'container.end.twig' %} 
-    {% include 'background-image.end.twig' %} 
+    {% include 'container.end.twig' %} 
+    
 {% include "container.end.twig" with { full: true } %}

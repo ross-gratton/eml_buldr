@@ -3,6 +3,7 @@
 {% if outer_class is not defined %}{% set outer_class = default_outer_class %}{% endif %}
 
 {% set default_class = 'container-body ' %}
+{% if full == true %}{% set default_class = '' %}{% endif %}
 {% if class is defined %}{% set class = default_class ~ class %}{% endif %}
 {% if class is not defined %}{% set class = default_class %}{% endif %}
 
