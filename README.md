@@ -29,6 +29,26 @@ npm install
 
 # Example Use
 
+Pattern to show an image next to article fields.
+```
+{% include "container.start.twig" with { outer_class: "bg--gallery", module: "Article - Image Left", thumb: "articles--image-left.png" } %}
+    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include "column.collection.start.twig" with { class: "stack-on-mobile" } %}
+
+            {# Column 1 #}
+            {% include "column.start.twig" with { class: "contains-image", width: 200, attributes: "valign='top'" } %}
+                {% include 'image.twig' with { src: "400x400.png", class: "full", width: 200 } %}
+            {% include "column.end.twig" with { gutter: 20 } %}
+
+            {# Column 2 #}
+            {% include "column.start.twig" %}
+                {% include "../../fragments/article-fields.twig" %}
+            {% include "column.end.twig" %} 
+            
+        {% include "column.collection.end.twig" %}
+    {% include "content.end.twig" with { bottom: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
+{% include "container.end.twig" %}
+```
 
 
 # Utilities
