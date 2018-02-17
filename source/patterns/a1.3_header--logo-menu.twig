@@ -1,4 +1,10 @@
-{% include "container.start.twig" with { outer_class: "bg--daintree", module: "Header - Logo Menu", thumb: "header--logo-menu.png" } %}
+{% include "container.start.twig" with {
+    module: "a1.3_header--logo-menu",
+    thumb: "a1.3_header--logo-menu.png",
+    outer_attributes: "data-bgcolor='a1.3_background--outer'",
+    attributes: "data-bgcolor='a1.3_background--inner'",
+    outer_class: "bg--daintree"
+} %}
     {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
         {% include "column.collection.start.twig" with { class: "mobile-stack mobile-center" } %}
 

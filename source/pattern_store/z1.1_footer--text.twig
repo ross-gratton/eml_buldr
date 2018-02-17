@@ -1,9 +1,23 @@
-{% include "container.start.twig" with { outer_class: "bg--daintree", module: "Footer - Text", thumb: "footer--text.png" } %}
-    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing, class: "t-12 copy white center" } %}
+{% include "container.start.twig" with {
+    module: "z1.1_footer--text",
+    thumb: "z1.1_footer--text.png",
+    outer_attributes: "data-bgcolor='z1.1_background--outer'",
+    attributes: "data-bgcolor='z1.1_background--inner'",
+    outer_class: "bg--daintree"
+} %}
+    {% include "content.start.twig" with {
+        top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing,
+        class: "t-12 copy white center",
+        attributes: "data-color='z1.1_text-color'"
+    } %}
 
         Varius danistas ducunt ad quadra. Fuga, torus, et solitudo. Sunt nuclear vexatum iacerees transferre placidus, fatalis spatiies.
 
-    {% include "content.spacer.twig" with { height: 10, left: horizontal_spacing, right: horizontal_spacing, class: "t-12 copy white center" } %}
+    {% include "content.spacer.twig" with {
+        height: 10, left: horizontal_spacing, right: horizontal_spacing,
+        class: "t-12 copy white center",
+        attributes: "data-color='z1.1_text-color'"
+    } %}
 
         Varius danistas ducunt ad quadra. Fuga, torus, et solitudo. Sunt nuclear vexatum iacerees transferre placidus, fatalis spatiies.
 

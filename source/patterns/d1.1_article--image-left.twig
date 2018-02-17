@@ -1,4 +1,10 @@
-{% include "container.start.twig" with { outer_class: "bg--gallery", module: "Article - Image Left", thumb: "articles--image-left.png" } %}
+{% include "container.start.twig" with {
+    module: "d1.1_article--image-left",
+    thumb: "d1.1_article--image-left.png",
+    outer_attributes: "data-bgcolor='d1.1_background--outer'",
+    attributes: "data-bgcolor='d1.1_background--inner'",
+    outer_class: "bg--gallery"
+} %}
     {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
         {% include "column.collection.start.twig" with { class: "stack-on-mobile" } %}
 
@@ -9,7 +15,7 @@
 
             {# Column 2 #}
             {% include "column.start.twig" %}
-                {% include "../../fragments/article-fields.twig" %}
+                {% include "../../fragments/article-fields.twig" with { template_code: "d1.1" } %}
             {% include "column.end.twig" %} 
             
         {% include "column.collection.end.twig" %}

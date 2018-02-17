@@ -1,19 +1,35 @@
-{% include "container.start.twig" with { 
-    outer_class: "bg--smalt-blue", module: "Text over image - Full Bleed", thumb: "text-over-image--full-bleed.png", full: true,
-    attributes: 'style="background-position: bottom center;" background="images/abstract-hills--banner.jpg"'
+{% include "container.start.twig" with {
+    module: "b1.2_text-over-image--full-bleed",
+    thumb: "b1.2_text-over-image--full-bleed.png",
+    outer_attributes: "data-bgcolor='b1.2_background--outer'",
+    attributes: "data-bg='b1.2_background-image' style='background-position: bottom center;' background='images/abstract-hills--banner.jpg'",
+    outer_class: "bg--smalt-blue",
+    full: true
 } %}
-    {% include 'container.start.twig' %}
+    {% include 'background-image.start.twig' with {
+        image: "images/abstract-hills-banner.jpg",
+        repeat: "no-repeat", width: 1200, height: 400
+    } %}
 
-        {% include 'content.start.twig' with { class: "center copy white t-50 bold", top: 50, left: horizontal_spacing, right: horizontal_spacing } %}
-            {% include 'background-image.start.twig' with { image: "images/abstract-hills-banner.jpg", repeat: "no-repeat", width: 1200, height: 400 } %}
+        {% include 'container.start.twig' with { attributes: "data-bgcolor='b1.2_background--inner'" } %}
+            {% include 'content.start.twig' with {
+                top: 50, left: horizontal_spacing, right: horizontal_spacing,
+                class: "center copy white t-50 bold",
+                attributes: "data-color='b1.2_title-color'"
+            } %}
 
                 Hero Messaging
-            {% include 'content.spacer.twig' with { class: "copy white t-20 center", height: 30, left: horizontal_spacing, right: horizontal_spacing } %}
+
+            {% include 'content.spacer.twig' with {
+                height: 30, left: horizontal_spacing, right: horizontal_spacing,
+                class: "copy white t-20 center",
+                attributes: "data-color='b1.2_text-color'"
+            } %}
 
                 Dolor anim eiusmod deserunt minim enim sint duis elit proident proident. Elit incididunt esse excepteur incididunt est reprehenderit mollit velit ad aliquip sunt consectetur. Reprehenderit amet Lorem consequat ad anim sunt elit ad. Nulla exercitation duis nisi irure commodo nostrud velit exercitation anim. Duis fugiat aliquip labore ullamco amet exercitation est adipisicing occaecat irure sunt veniam veniam reprehenderit.
 
-            {% include 'background-image.end.twig' %} 
-        {% include 'content.end.twig' with { bottom: 50, left: horizontal_spacing, right: horizontal_spacing } %}
+            {% include 'content.end.twig' with { bottom: 50, left: horizontal_spacing, right: horizontal_spacing } %}
+        {% include 'container.end.twig' %}
 
-    {% include 'container.end.twig' %} 
+    {% include 'background-image.end.twig' %}
 {% include "container.end.twig" with { full: true } %}

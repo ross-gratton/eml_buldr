@@ -1,9 +1,23 @@
-{% include "container.start.twig" with { outer_class: "bg--white", module: "Title Text", thumb: "title-text.png" } %}
-    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing, class: "t-30 copy daintree center bold" } %}
+{% include "container.start.twig" with {
+    module: "c1.2_title-text",
+    thumb: "c1.2_title-text.png",
+    outer_attributes: "data-bgcolor='c1.2_background--outer'",
+    attributes: "data-bgcolor='c1.2_background--inner'",
+    outer_class: "bg--white"
+} %}
+    {% include "content.start.twig" with {
+        top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing,
+        class: "t-30 copy daintree center bold",
+        attributes: "data-color='c1.2_title-color'"
+    } %}
 
         Minim velit consequat minim ut mollit ex minim ullamco amet id.
     
-    {% include "content.spacer.twig" with { height: 20, left: horizontal_spacing, right: horizontal_spacing, class: "t-14 copy daintree" } %}
+    {% include "content.spacer.twig" with {
+        height: 20, left: horizontal_spacing, right: horizontal_spacing,
+        class: "t-14 copy daintree",
+        attributes: "data-color='c1.2_text-color'"
+    } %}
 
         Voluptate duis voluptate pariatur esse non nostrud et. Enim sit nostrud magna sit amet non pariatur do officia ea tempor consequat ullamco nulla. Ad cupidatat non ut esse irure. Elit proident aliquip enim aliquip do. Consequat deserunt sit excepteur ipsum laboris irure nostrud consequat ullamco. Ex dolor dolor ut magna sunt.
 

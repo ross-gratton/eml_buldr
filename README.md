@@ -104,6 +104,7 @@ outer_attributes: string
 class: string
 attributes: string
 top: number
+full: boolean
 module: string			// StampReady Module Name
 thumb: string			// StampReady Module Thumb
 ```

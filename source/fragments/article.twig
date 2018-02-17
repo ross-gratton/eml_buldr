@@ -1,19 +1,37 @@
 {% include "content.start.twig" with { class: "contains-image full" } %}
+
     {% include "image.twig" with { src: "400x300.png", class: "full", width: image_width } %}
-{% include "content.spacer.twig" with { height: 10, class: "copy daintree t-24 bold" } %}
+
+{% include "content.spacer.twig" with {
+    height: 10, class: "copy daintree t-24 bold",
+    attributes: "data-color='" ~ template_code ~ "_title-color'"
+} %}
+
     Lorem Ipsum
-{% include "content.spacer.twig" with { class: "copy t-18 smalt-blue" } %}
+
+{% include "content.spacer.twig" with {
+    class: "copy t-18 smalt-blue",
+    attributes: "data-color='" ~ template_code ~ "_date-color'"
+} %}
+
     6 June 2017
-{% include "content.spacer.twig" with { height: 15, class: "daintree copy t-14" } %}
+
+{% include "content.spacer.twig" with {
+    height: 15, class: "daintree copy t-14",
+    attributes: "data-color='" ~ template_code ~ "_text-color'"
+} %}
+
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula dolor nec tellus aliquam, id blandit purus suscipit.
     Etiam vel nulla vel lacus dignissim sodales. Pellentesque id turpis vestibulum, efficitur justo eu, malesuada nisi.
     Nullam fringilla sem sit amet bibendum maximus. Proin a lobortis ante.
+
 {% include "content.spacer.twig" with { height: 20 } %}
 
     {% include "button.twig" with {
         top: 10, bottom: 10, left: 15, right: 15,
         href: "https://www.google.com.com/", text: "Read more",
-        outer_class: "bg--cadet-grey", link_class: "t-14"
+        outer_class: "bg--cadet-grey", link_class: "t-14 white",
+        outer_attributes: "data-bgcolor='" ~ template_code ~ "_button-background'"
     } %}
 
 {% include "content.end.twig" %}

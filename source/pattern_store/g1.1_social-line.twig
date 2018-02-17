@@ -1,4 +1,10 @@
-{% include "container.start.twig" with { outer_class: "bg--casper", module: "Social Line", thumb: "social-line.png" } %}
+{% include "container.start.twig" with {
+    module: "g1.1_social-line",
+    thumb: "g1.1_social-line.png",
+    outer_attributes: "data-bgcolor='g1.1_background--outer'",
+    attributes: "data-bgcolor='g1.1_background--inner'",
+    outer_class: "bg--casper"
+} %}
     {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
         {% include "column.collection.start.twig" with { class: "mobile-stack mobile-center" } %}
 

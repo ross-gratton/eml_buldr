@@ -1,5 +1,15 @@
-{% include 'content.start.twig' with { class: "copy t-40 daintree bold" } %}
+{% include 'content.start.twig' with {
+    class: "copy t-40 daintree bold",
+    attributes: "data-color='" ~ template_code ~ "_number-color'"
+} %}
+
     01
-{% include 'content.spacer.twig' with { class: "copy t-14 daintree" } %}
+
+{% include 'content.spacer.twig' with {
+    class: "copy t-14 daintree",
+    attributes: "data-color='" ~ template_code ~ "_text-color'"
+} %}
+
     Pariatur mollit labore excepteur irure voluptate aliqua. In officia et labore esse nisi pariatur enim dolor ea sint id cillum quis ex.
+
 {% include 'content.end.twig' %}

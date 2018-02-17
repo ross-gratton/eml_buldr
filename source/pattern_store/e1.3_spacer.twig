@@ -1,0 +1,10 @@
+{% include "container.start.twig" with {
+    module: "e1.3_spacer",
+    thumb: "e1.3_spacer.png",
+    outer_attributes: "data-bgcolor='e1.3_background--outer'",
+    attributes: "data-bgcolor='e1.3_background--inner'",
+    outer_class: "bg--white"
+} %}
+    {% include 'content.start.twig' with { class: 'bg--white', top: 40 } %}
+    {% include 'content.end.twig' %}
+{% include "container.end.twig" %}

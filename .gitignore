@@ -3,3 +3,4 @@ app/node_modules
 app/tmp
 .DS_Store
 package/*
+.idea

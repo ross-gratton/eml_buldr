@@ -1,5 +1,15 @@
-{% include "container.start.twig" with { outer_class: "bg--cadet-grey", module: "Title", thumb: "title.png" } %}
-    {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing, class: "t-30 copy white center bold" } %}
+{% include "container.start.twig" with {
+    module: "c1.1_title",
+    thumb: "c1.1_title.png",
+    outer_attributes: "data-bgcolor='c1.1_background--outer'",
+    attributes: "data-bgcolor='c1.1_background--inner'",
+    outer_class: "bg--cadet-grey"
+} %}
+    {% include "content.start.twig" with {
+        top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing,
+        class: "t-30 copy white center bold",
+        attributes: "data-color='c1.1_text-color'"
+    } %}
 
         Minim velit consequat minim ut mollit ex minim ullamco amet id.
 
