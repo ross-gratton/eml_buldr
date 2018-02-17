@@ -14,6 +14,11 @@ This generator is essentially a series of Twig files that abstract away the need
 
 The tool has been specifically designed to follow a StampReady methodology, that is to say, you create isolated modules, (called patterns in the tool to prevent confusion). Drop a twig file into the `/patterns` directory and it'll be compiled into your email. The `container.start.twig` utility file can take a module name and thumbnail.
 
+### Bundled Module Examples
+![Modules 1](modules_1.png)
+![Modules 2](modules_2.png)
+
+
 # Setup
 Before you get started you will need to have the following installed:
 - Nodejs
