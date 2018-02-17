@@ -61,7 +61,7 @@ As utilites are twig files, use as such:
 The tool is bundled with a bunch of patterns for you to use in order to understand how to work with the utilities.
 
 ### d1.1_article--image-left
-![Image Left of Article Fields](/source/thumbnails/image-left-of-article-fields.png)
+![Image Left of Article Fields](/source/thumbnails/d1.1_article--image-left.png)
 ```
 {% include "container.start.twig" with { outer_class: "bg--gallery", module: "Article - Image Left", thumb: "articles--image-left.png" } %}
     {% include "content.start.twig" with { top: vertical_spacing, left: horizontal_spacing, right: horizontal_spacing } %}
